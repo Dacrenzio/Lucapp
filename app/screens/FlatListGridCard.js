@@ -14,7 +14,9 @@ function FlatListGridCard({ navigation }) {
     <SafeAreaView style={styles.list}>
       <FlatList
         data={dataList}
-        renderItem={({ item }) => <CardItem src={item.src} name={item.name} />}
+        renderItem={({ item }) => (
+          <CardItem src={item.src} name={item.name} nav={navigation} />
+        )}
         numColumns={3}
       />
     </SafeAreaView>

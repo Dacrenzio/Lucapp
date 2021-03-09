@@ -1,10 +1,11 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-function MiscInfoScreen(props) {
+function MiscInfoScreen({ route }) {
+  const char = route.params.charName;
   return (
     <View style={styles.container}>
-      <Text>MiscInfoScreen Page</Text>
+      <Text>{char} Page</Text>
     </View>
   );
 }
