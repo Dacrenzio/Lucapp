@@ -2,10 +2,9 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 function MiscInfoScreen({ route }) {
-  const char = route.params.charName;
   return (
     <View style={styles.container}>
-      <Text>{char} Page</Text>
+      <Text>{route.params.arrayItem[0]} Misc info Page</Text>
     </View>
   );
 }

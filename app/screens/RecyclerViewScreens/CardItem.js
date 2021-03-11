@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View, StyleSheet, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
-function CardItem({ src, name, nav }) {
+function CardItem({ id, numCol, src, name, nav }) {
   const onPress = () => {
     nav.navigate("Datas", { charName: name });
   };
@@ -11,7 +11,7 @@ function CardItem({ src, name, nav }) {
       style={[
         styles.container,
         {
-          marginBottom: name === "Zero Suit Samus" || name === "Zelda" ? 35 : 4,
+          marginBottom: id >= 83 - (83 % numCol) ? 30 : 4,
         },
       ]}
     >

@@ -4,16 +4,16 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import FlatListGridCard from "./app/screens/FlatListGridCard";
-import MiscInfoScreen from "./app/screens/RecyclerViewScreens/MiscInfoScreen";
+import TabNavigationInfo from "./app/screens/RecyclerViewScreens/TabNavigationInfo";
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer style={styles.container}>
+    <NavigationContainer style={styles.container} linking={{ enabled: true }}>
       <Stack.Navigator screenOptions={header}>
         <Stack.Screen name="Home" component={FlatListGridCard} />
-        <Stack.Screen name="Datas" component={MiscInfoScreen} />
+        <Stack.Screen name="Datas" component={TabNavigationInfo} />
       </Stack.Navigator>
     </NavigationContainer>
   );
