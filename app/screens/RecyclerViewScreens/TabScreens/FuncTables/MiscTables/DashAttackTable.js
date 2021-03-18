@@ -1,0 +1,57 @@
+import React from "react";
+import { StyleSheet } from "react-native";
+import { Table, Row } from "react-native-table-component";
+import DefColors from "../../../../../../DefColors";
+
+function DashAttack({ charDatas }) {
+  if (charDatas[3] === "No") {
+    return (
+      <Table
+        borderStyle={{ borderWidth: 2, borderColor: DefColors.black }}
+        style={styles.table}
+      >
+        <Row
+          data={["Dash-Attack at ledge", "No"]}
+          style={{ backgroundColor: DefColors.tableTitle }}
+          textStyle={styles.row}
+          flexArr={[3, 1]}
+        />
+      </Table>
+    );
+  } else {
+    return (
+      <Table
+        borderStyle={{ borderWidth: 2, borderColor: DefColors.black }}
+        style={styles.table}
+      >
+        <Row
+          data={["Dash-Attack at ledge", charDatas[3]]}
+          style={{ backgroundColor: DefColors.tableTitle }}
+          textStyle={styles.row}
+          flexArr={[3, 1]}
+        />
+        <Row
+          data={["Kill percentage:", charDatas[4]]}
+          style={{ backgroundColor: DefColors.primaryRow }}
+          textStyle={styles.row}
+          flexArr={[3, 1]}
+        />
+      </Table>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  table: {
+    marginTop: 40,
+    marginHorizontal: 40,
+  },
+  row: {
+    textAlign: "center",
+    color: DefColors.black,
+    padding: 12,
+    fontWeight: "bold",
+  },
+});
+
+export default DashAttack;

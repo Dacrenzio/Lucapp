@@ -1,10 +1,11 @@
 import React from "react";
 import { Text, View, StyleSheet, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import DefColors from "../../../DefColors";
 
 function CardItem({ id, numCol, src, name, nav }) {
   const onPress = () => {
-    nav.navigate("Datas", { charName: name });
+    nav.navigate("Datas", { charName: name, title: name });
   };
   return (
     <View
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
   container: {
     borderWidth: 2,
     borderRadius: 15,
-    backgroundColor: "#fff",
+    backgroundColor: DefColors.white,
     alignItems: "center",
     margin: 4,
     maxWidth: "31%",
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: "center",
     fontWeight: "bold",
-    color: "#000",
+    color: DefColors.black,
   },
 });
 

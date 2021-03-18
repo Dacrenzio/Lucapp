@@ -5,31 +5,54 @@ import MiscInfoScreen from "./TabScreens/MiscInfoScreen";
 import TechInfoScreen from "./TabScreens/TechInfoScreen";
 import KillConfirmScreen from "./TabScreens/KillConfirmScreen";
 
+import CharDatas from "../../assets/rawData/CharDatas.js";
+
 const Tab = createMaterialTopTabNavigator();
 
 function TabNavigationInfo({ route }) {
-  const char = route.params.charName;
+  const char = fetchCharDatas(route.params.charName);
   return (
     <Tab.Navigator backBehavior="none">
       <Tab.Screen
         name="Misc Info"
         component={MiscInfoScreen}
-        initialParams={{ arrayItem: [char] }}
+        initialParams={{ arrayItem: char }}
       />
       <Tab.Screen
         name="Tech chase"
         component={TechInfoScreen}
-        initialParams={{ arrayItem: [char] }}
+        initialParams={{ arrayItem: char }}
       />
       <Tab.Screen
         name="Kill Confirm"
         component={KillConfirmScreen}
-        initialParams={{ arrayItem: [char] }}
+        initialParams={{ arrayItem: char }}
       />
     </Tab.Navigator>
   );
 }
 
-function fetchCharDatas(charName) {}
+function fetchCharDatas(charName) {
+  if (charName === "Pokemon Trainer") {
+    return CharDatas[74].split(";");
+  }
+  let l = 0;
+  let r = CharDatas.length - 1;
+
+  while (l <= r) {
+    var m = Math.trunc((l + r) / 2);
+    var c = CharDatas[m].split(";")[0].toLowerCase();
+
+    if (charName.toLowerCase() === c) {
+      return CharDatas[m].split(";");
+    } else if (charName.toLowerCase() > c) {
+      l = m + 1;
+    } else {
+      r = m - 1;
+    }
+  }
+
+  return "not found";
+}
 
 export default TabNavigationInfo;

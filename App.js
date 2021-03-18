@@ -5,6 +5,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import FlatListGridCard from "./app/screens/FlatListGridCard";
 import TabNavigationInfo from "./app/screens/RecyclerViewScreens/TabNavigationInfo";
+import DefColors from "./DefColors";
 
 const Stack = createStackNavigator();
 
@@ -13,7 +14,11 @@ export default function App() {
     <NavigationContainer style={styles.container} linking={{ enabled: true }}>
       <Stack.Navigator screenOptions={header}>
         <Stack.Screen name="Home" component={FlatListGridCard} />
-        <Stack.Screen name="Datas" component={TabNavigationInfo} />
+        <Stack.Screen
+          name="Datas"
+          component={TabNavigationInfo}
+          options={({ route }) => ({ title: route.params.charName })}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -22,10 +27,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: DefColors.white,
   },
 });
 
 const header = {
-  headerStyle: {},
+  headerStyle: {
+    backgroundColor: DefColors.white,
+  },
 };

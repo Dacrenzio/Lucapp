@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import DefColors from "../../../../DefColors";
 
 function TechInfoScreen(props) {
   return (
@@ -12,7 +13,7 @@ function TechInfoScreen(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: DefColors.white,
     alignItems: "center",
     justifyContent: "center",
   },

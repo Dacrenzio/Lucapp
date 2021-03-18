@@ -17,12 +17,16 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.Lucapp",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
+      "package": "com.Lucapp",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#9f9f9f"
       }
     },
     "web": {

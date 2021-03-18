@@ -1,19 +1,33 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
+import DefColors from "../../../../DefColors";
+import DashAttackTable from "./FuncTables/MiscTables/DashAttackTable";
+import UairOosTable from "./FuncTables/MiscTables/UairOosTable";
+import ZairUpAirTable from "./FuncTables/MiscTables/ZairUpAirTable";
+import AbsorbableMovesTable from "./FuncTables/MiscTables/AbsorbableMovesTable";
 
 function MiscInfoScreen({ route }) {
+  let charDatas = route.params.arrayItem;
   return (
-    <View style={styles.container}>
-      <Text>{route.params.arrayItem[0]} Misc info Page</Text>
-    </View>
+    <ScrollView style={styles.container}>
+      <View>
+        <UairOosTable charDatas={charDatas} />
+        <DashAttackTable charDatas={charDatas} />
+        <ZairUpAirTable charDatas={charDatas} />
+        <AbsorbableMovesTable charDatas={charDatas} />
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
+    backgroundColor: DefColors.white,
+  },
+  containerView: {
+    alignItems: "stretch",
     justifyContent: "center",
   },
 });

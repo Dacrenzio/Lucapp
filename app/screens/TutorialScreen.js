@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
+import DefColors from "../../DefColors";
 
 function TutorialScreen() {
   return (
@@ -12,7 +13,7 @@ function TutorialScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: DefColors.black,
     alignItems: "center",
     justifyContent: "center",
   },
