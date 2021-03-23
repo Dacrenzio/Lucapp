@@ -40,8 +40,8 @@ function ShieldPressureTable({ charDatas }) {
 
 const styles = StyleSheet.create({
   table: {
+    width: 310,
     marginTop: 40,
-    marginHorizontal: 40,
   },
   row: {
     textAlign: "center",

@@ -1,11 +1,10 @@
 import React from "react";
-import { Text, View, StyleSheet, Image } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
 import DefColors from "../../../DefColors";
 
 function CardItem({ id, numCol, src, name, nav }) {
   const onPress = () => {
-    nav.navigate("Datas", { charName: name, title: name });
+    nav.navigate("Datas", { charName: name });
   };
   return (
     <View

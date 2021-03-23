@@ -14,7 +14,7 @@ function DashAttack({ charDatas }) {
           data={["Dash-Attack at ledge", "No"]}
           style={{ backgroundColor: DefColors.tableTitle }}
           textStyle={styles.row}
-          flexArr={[3, 1]}
+          flexArr={[2, 1]}
         />
       </Table>
     );
@@ -28,13 +28,13 @@ function DashAttack({ charDatas }) {
           data={["Dash-Attack at ledge", charDatas[3]]}
           style={{ backgroundColor: DefColors.tableTitle }}
           textStyle={styles.row}
-          flexArr={[3, 1]}
+          flexArr={[2, 1]}
         />
         <Row
           data={["Kill percentage:", charDatas[4]]}
           style={{ backgroundColor: DefColors.primaryRow }}
           textStyle={styles.row}
-          flexArr={[3, 1]}
+          flexArr={[2, 1]}
         />
       </Table>
     );
@@ -43,8 +43,8 @@ function DashAttack({ charDatas }) {
 
 const styles = StyleSheet.create({
   table: {
+    width: 310,
     marginTop: 40,
-    marginHorizontal: 40,
   },
   row: {
     textAlign: "center",

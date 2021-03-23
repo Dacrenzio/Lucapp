@@ -11,7 +11,7 @@ function MiscInfoScreen({ route }) {
   let charDatas = route.params.arrayItem;
   return (
     <ScrollView style={styles.container}>
-      <View>
+      <View style={styles.containerView}>
         <UairOosTable charDatas={charDatas} />
         <DashAttackTable charDatas={charDatas} />
         <ZairUpAirTable charDatas={charDatas} />
@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
     backgroundColor: DefColors.white,
   },
   containerView: {
-    alignItems: "stretch",
-    justifyContent: "center",
+    alignItems: "center",
+    justifyContent: "space-evenly",
   },
 });
 export default MiscInfoScreen;

@@ -11,13 +11,8 @@ function ZairUpAir({ charDatas }) {
     >
       <Row
         data={["Zair to Up-Air", charDatas[2]]}
-        textStyle={{
-          textAlign: "center",
-          color: DefColors.black,
-          padding: 12,
-          fontWeight: "bold",
-        }}
-        flexArr={[3, 1]}
+        textStyle={styles.text}
+        flexArr={[2, 1]}
       />
     </Table>
   );
@@ -25,9 +20,15 @@ function ZairUpAir({ charDatas }) {
 
 const styles = StyleSheet.create({
   table: {
+    width: 310,
     marginTop: 40,
     backgroundColor: DefColors.tableTitle,
-    marginHorizontal: 40,
+  },
+  text: {
+    textAlign: "center",
+    color: DefColors.black,
+    padding: 12,
+    fontWeight: "bold",
   },
 });
 

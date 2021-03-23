@@ -10,6 +10,10 @@ const DefColors = {
   primaryRow: "#c7c54e",
   secondaryRow: "#e7bcf1",
   noteRow: "#66d16a",
+
+  yesColor: "#34eb52",
+  noColor: "#eb4034",
+  otherOptionColor: "#eb9334",
 };
 
 export default DefColors;

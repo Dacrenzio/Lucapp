@@ -34,8 +34,14 @@ function DashAttack({ charDatas }) {
               backgroundColor:
                 index % 2 ? DefColors.secondaryRow : DefColors.primaryRow,
             }}
-            textStyle={[styles.row, { fontWeight: "normal" }]}
-            flexArr={[2, 1]}
+            textStyle={[
+              styles.row,
+              {
+                fontWeight: "normal",
+                padding: 6,
+              },
+            ]}
+            flexArr={[1.5, 1]}
           />
         ))}
       </Table>
@@ -45,8 +51,8 @@ function DashAttack({ charDatas }) {
 
 const styles = StyleSheet.create({
   table: {
+    width: 310,
     marginTop: 40,
-    marginHorizontal: 40,
   },
   row: {
     textAlign: "center",

@@ -11,7 +11,7 @@ const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer style={styles.container} linking={{ enabled: true }}>
+    <NavigationContainer style={styles.container} linking={{ enabled: false }}>
       <Stack.Navigator screenOptions={header}>
         <Stack.Screen name="Home" component={FlatListGridCard} />
         <Stack.Screen
