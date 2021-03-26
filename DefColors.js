@@ -7,12 +7,12 @@ const DefColors = {
   black: "#000",
 
   tableTitle: "#4cd1d4",
-  primaryRow: "#c7c54e",
+  primaryRow: "#c4b22b",
   secondaryRow: "#e7bcf1",
   noteRow: "#66d16a",
 
   yesColor: "#34eb52",
-  noColor: "#eb4034",
+  noColor: "#de1d0d",
   otherOptionColor: "#eb9334",
 };
 

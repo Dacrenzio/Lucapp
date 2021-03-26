@@ -33,7 +33,7 @@ function DashAttack({ charDatas }) {
         <Row
           data={["Kill percentage:", charDatas[4]]}
           style={{ backgroundColor: DefColors.primaryRow }}
-          textStyle={styles.row}
+          textStyle={[styles.row, { fontWeight: "normal", padding: 8 }]}
           flexArr={[2, 1]}
         />
       </Table>

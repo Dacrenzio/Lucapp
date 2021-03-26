@@ -6,6 +6,7 @@ import DashAttackTable from "./FuncTables/MiscTables/DashAttackTable";
 import UairOosTable from "./FuncTables/MiscTables/UairOosTable";
 import ZairUpAirTable from "./FuncTables/MiscTables/ZairUpAirTable";
 import AbsorbableMovesTable from "./FuncTables/MiscTables/AbsorbableMovesTable";
+import ShieldPressureTable from "./FuncTables/MiscTables/ShieldPressureTable";
 
 function MiscInfoScreen({ route }) {
   let charDatas = route.params.arrayItem;
@@ -16,6 +17,7 @@ function MiscInfoScreen({ route }) {
         <DashAttackTable charDatas={charDatas} />
         <ZairUpAirTable charDatas={charDatas} />
         <AbsorbableMovesTable charDatas={charDatas} />
+        <ShieldPressureTable charDatas={charDatas} />
       </View>
     </ScrollView>
   );
