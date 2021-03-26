@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 import { Table, Row } from "react-native-table-component";
 import DefColors from "../../../../../../DefColors";
 
-function ShieldPressureTable({ charDatas }) {
+function ShieldPressureTable({ charDatas, marginBott }) {
   let datas = [];
   let notes = [];
 
@@ -33,7 +33,7 @@ function ShieldPressureTable({ charDatas }) {
   return (
     <Table
       borderStyle={{ borderWidth: 2, borderColor: DefColors.black }}
-      style={styles.table}
+      style={[styles.table, marginBott]}
     >
       <Row
         data={

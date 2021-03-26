@@ -17,7 +17,10 @@ function MiscInfoScreen({ route }) {
         <DashAttackTable charDatas={charDatas} />
         <ZairUpAirTable charDatas={charDatas} />
         <AbsorbableMovesTable charDatas={charDatas} />
-        <ShieldPressureTable charDatas={charDatas} />
+        <ShieldPressureTable
+          charDatas={charDatas}
+          marginBott={{ marginBottom: 50 }}
+        />
       </View>
     </ScrollView>
   );

@@ -6,13 +6,13 @@ const DefColors = {
   white: "#fff",
   black: "#000",
 
-  tableTitle: "#4cd1d4",
-  primaryRow: "#c4b22b",
+  tableTitle: "#85d4d6",
+  primaryRow: "#d1c44d",
   secondaryRow: "#e7bcf1",
   noteRow: "#66d16a",
 
-  yesColor: "#34eb52",
-  noColor: "#de1d0d",
+  yesColor: "#94ffa5",
+  noColor: "#ff938a",
   otherOptionColor: "#eb9334",
 };
 
