@@ -29,7 +29,7 @@ function MiscInfoScreen({ route }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: DefColors.white,
+    backgroundColor: DefColors.black,
   },
   containerView: {
     alignItems: "center",

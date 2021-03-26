@@ -3,13 +3,10 @@ import { StyleSheet } from "react-native";
 import { Table, Row } from "react-native-table-component";
 import DefColors from "../../../../../../DefColors";
 
-function DashAttack({ charDatas }) {
+function DashAttackTable({ charDatas }) {
   if (charDatas[3] === "No") {
     return (
-      <Table
-        borderStyle={{ borderWidth: 2, borderColor: DefColors.black }}
-        style={styles.table}
-      >
+      <Table style={styles.table}>
         <Row
           data={["Dash-Attack at ledge", "No"]}
           style={{ backgroundColor: DefColors.tableTitle }}
@@ -20,10 +17,7 @@ function DashAttack({ charDatas }) {
     );
   } else {
     return (
-      <Table
-        borderStyle={{ borderWidth: 2, borderColor: DefColors.black }}
-        style={styles.table}
-      >
+      <Table style={styles.table}>
         <Row
           data={["Dash-Attack at ledge", charDatas[3]]}
           style={{ backgroundColor: DefColors.tableTitle }}
@@ -54,4 +48,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DashAttack;
+export default DashAttackTable;

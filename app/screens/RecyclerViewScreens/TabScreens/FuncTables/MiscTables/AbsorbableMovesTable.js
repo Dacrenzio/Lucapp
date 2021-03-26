@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 import { Table, Row } from "react-native-table-component";
 import DefColors from "../../../../../../DefColors";
 
-function DashAttack({ charDatas }) {
+function AbsorbableMovesTable({ charDatas }) {
   if (charDatas[5].length === 0) {
     return null;
   } else {
@@ -15,39 +15,40 @@ function DashAttack({ charDatas }) {
       datas.push([charDatas[index++], charDatas[index]]);
     }
 
-    return (
-      <Table
-        borderStyle={{ borderWidth: 2, borderColor: DefColors.black }}
-        style={styles.table}
-      >
-        <Row
-          data={["Heal Percentages"]}
-          style={{ backgroundColor: DefColors.tableTitle }}
-          textStyle={styles.row}
-          flexArr={[3, 1]}
-        />
-        {datas.map((rowData, index) => (
-          <Row
-            key={index}
-            data={rowData}
-            style={{
-              backgroundColor:
-                index % 2 ? DefColors.secondaryRow : DefColors.primaryRow,
-            }}
-            textStyle={[
-              styles.row,
-              {
-                fontWeight: "normal",
-                padding: 6,
-              },
-            ]}
-            flexArr={[1.5, 1]}
-          />
-        ))}
-      </Table>
-    );
+    return <AbsorbableMovesTableRender datas={datas} />;
   }
 }
+
+const AbsorbableMovesTableRender = ({ datas }) => {
+  return (
+    <Table style={styles.table}>
+      <Row
+        data={["Heal Percentages"]}
+        style={{ backgroundColor: DefColors.tableTitle }}
+        textStyle={styles.row}
+        flexArr={[3, 1]}
+      />
+      {datas.map((rowData, index) => (
+        <Row
+          key={index}
+          data={rowData}
+          style={{
+            backgroundColor:
+              index % 2 ? DefColors.secondaryRow : DefColors.primaryRow,
+          }}
+          textStyle={[
+            styles.row,
+            {
+              fontWeight: "normal",
+              padding: 6,
+            },
+          ]}
+          flexArr={[1.5, 1]}
+        />
+      ))}
+    </Table>
+  );
+};
 
 const styles = StyleSheet.create({
   table: {
@@ -62,4 +63,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default DashAttack;
+export default AbsorbableMovesTable;

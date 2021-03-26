@@ -27,7 +27,8 @@ const styles = StyleSheet.create({
   container: {
     borderWidth: 2,
     borderRadius: 15,
-    backgroundColor: DefColors.white,
+    borderColor: DefColors.black,
+    backgroundColor: DefColors.black,
     alignItems: "center",
     margin: 4,
     maxWidth: "31%",
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: "center",
     fontWeight: "bold",
-    color: DefColors.black,
+    color: DefColors.white,
   },
 });
 

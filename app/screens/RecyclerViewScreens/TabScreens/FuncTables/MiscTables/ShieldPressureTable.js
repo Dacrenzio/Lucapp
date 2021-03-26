@@ -31,10 +31,7 @@ function ShieldPressureTable({ charDatas, marginBott }) {
   }
 
   return (
-    <Table
-      borderStyle={{ borderWidth: 2, borderColor: DefColors.black }}
-      style={[styles.table, marginBott]}
-    >
+    <Table style={[styles.table, marginBott]}>
       <Row
         data={
           charDatas[110] === ""
@@ -68,7 +65,6 @@ let NoteRows = ({ notesData }) => {
   if (notesData.length != 0) {
     return [
       <Row
-        borderStyle={{ borderWidth: 2, borderColor: DefColors.black }}
         key={0}
         data={["Note"]}
         style={{ backgroundColor: DefColors.noteRow }}
@@ -76,7 +72,6 @@ let NoteRows = ({ notesData }) => {
         flexArr={[1]}
       />,
       <Row
-        borderStyle={{ borderWidth: 2, borderColor: DefColors.black }}
         key={1}
         data={[notesData[1]]}
         style={{ backgroundColor: DefColors.primaryRow }}

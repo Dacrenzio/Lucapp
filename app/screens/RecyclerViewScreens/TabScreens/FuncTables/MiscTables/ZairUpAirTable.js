@@ -5,10 +5,7 @@ import DefColors from "../../../../../../DefColors";
 
 function ZairUpAir({ charDatas }) {
   return (
-    <Table
-      borderStyle={{ borderWidth: 2, borderColor: DefColors.black }}
-      style={styles.table}
-    >
+    <Table style={styles.table}>
       <Row
         data={["Zair to Up-Air", charDatas[2]]}
         textStyle={styles.text}

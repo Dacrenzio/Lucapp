@@ -1,17 +1,15 @@
 const DefColors = {
-  darkGrey: "#fff",
-  yesColor: "#6CF324",
-  noColor: "#EC1932",
+  blackText: "#fff",
   otherColor: "#DAB851",
   white: "#fff",
-  black: "#000",
+  black: "#2B2B2B",
 
-  tableTitle: "#85d4d6",
-  primaryRow: "#d1c44d",
-  secondaryRow: "#e7bcf1",
+  tableTitle: "#5efcff",
+  primaryRow: "#FFF6A6",
+  secondaryRow: "#75FFC4",
   noteRow: "#66d16a",
 
-  yesColor: "#94ffa5",
+  yesColor: "#75FFC4",
   noColor: "#ff938a",
   otherOptionColor: "#eb9334",
 };

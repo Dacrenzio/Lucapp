@@ -5,10 +5,7 @@ import DefColors from "../../../../../../DefColors";
 
 function UairOosTable({ charDatas }) {
   return (
-    <Table
-      borderStyle={{ borderWidth: 2, borderColor: DefColors.black }}
-      style={styles.table}
-    >
+    <Table style={styles.table}>
       <Row
         data={["Up-Air out of shield", charDatas[1]]}
         textStyle={styles.text}
