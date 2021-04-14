@@ -8,10 +8,13 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@nativescript/core": "^8.0.1",
+    "@nativescript/theme": "^3.0.1",
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/material-top-tabs": "^5.3.14",
     "@react-navigation/stack": "^5.14.3",
     "expo": "~40.0.0",
+    "expo-cli": "^4.3.5",
     "expo-status-bar": "~1.0.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",

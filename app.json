@@ -23,6 +23,7 @@
       "supportsTablet": true
     },
     "android": {
+      "userInterfaceStyle": "light",
       "package": "com.Lucapp",
       "versionCode": 1,
       "adaptiveIcon": {
