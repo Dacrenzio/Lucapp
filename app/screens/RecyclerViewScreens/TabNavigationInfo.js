@@ -34,7 +34,7 @@ function TabNavigationInfo({ route }) {
 
 function fetchCharDatas(charName) {
   if (charName === "Pokemon Trainer") {
-    return CharDatas[74].split(";");
+    return CharDatas[76].split(";");
   }
   let l = 0;
   let r = CharDatas.length - 1;
