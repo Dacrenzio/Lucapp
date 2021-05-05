@@ -1,21 +1,29 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import DefColors from "../../../../DefColors";
+import { StyleSheet, View } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 
-function TechInfoScreen(props) {
+import DefColors from "../../../../DefColors";
+import TumbleTable from "./FuncTables/TechTables/TumbleTable";
+
+function TechInfoScreen({ route }) {
+  let charDatas = route.params.arrayItem;
   return (
-    <View style={styles.container}>
-      <Text>TechInfoScreen Page</Text>
-    </View>
+    <ScrollView style={styles.container}>
+      <View style={styles.containerView}>
+        <TumbleTable charDatas={charDatas} />
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: DefColors.white,
+    backgroundColor: DefColors.black,
+  },
+  containerView: {
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
   },
 });
 export default TechInfoScreen;

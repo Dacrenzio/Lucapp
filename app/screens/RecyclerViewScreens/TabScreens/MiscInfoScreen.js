@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
+
 import DefColors from "../../../../DefColors";
 import DashAttackTable from "./FuncTables/MiscTables/DashAttackTable";
 import UairOosTable from "./FuncTables/MiscTables/UairOosTable";
