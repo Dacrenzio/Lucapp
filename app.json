@@ -4,12 +4,12 @@
     "slug": "Lucapp-multi",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./app/assets/icon.png",
+    "icon": "./app/assets/icon_fan_made.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./app/assets/splash.png",
+      "image": "./app/assets/icon_fan_made_foreground.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#2B2B2B"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -27,12 +27,12 @@
       "package": "com.Lucapp",
       "versionCode": 1,
       "adaptiveIcon": {
-        "foregroundImage": "./app/assets/adaptive-icon.png",
+        "foregroundImage": "./app/assets/icon_fan_made_foreground.png",
         "backgroundColor": "#9f9f9f"
       }
     },
     "web": {
-      "favicon": "./app/assets/favicon.png"
+      "favicon": "./app/assets/icon_fan_made_foreground.png"
     }
   }
 }
