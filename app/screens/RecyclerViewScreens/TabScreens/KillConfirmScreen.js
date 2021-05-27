@@ -9,8 +9,7 @@ import DtiltConfirmTable from "./FuncTables/KillConfirmTables/DtiltConfirmTable"
 import UpSmashKillTable from "./FuncTables/KillConfirmTables/UpSmashKillTable";
 import UpThrowKillTable from "./FuncTables/KillConfirmTables/UpThrowKillTable";
 
-function KillConfirmScreen({ route }) {
-  let charDatas = route.params.arrayItem;
+function KillConfirmScreen({ charDatas }) {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.containerView}>

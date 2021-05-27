@@ -7,8 +7,7 @@ import TumbleTable from "./FuncTables/TechTables/TumbleTable";
 import UpThrowTech from "./FuncTables/TechTables/UpThrowTech";
 import UpTiltTechTable from "./FuncTables/TechTables/UpTiltTechTable";
 
-function TechInfoScreen({ route }) {
-  let charDatas = route.params.arrayItem;
+function TechInfoScreen({ charDatas }) {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.containerView}>

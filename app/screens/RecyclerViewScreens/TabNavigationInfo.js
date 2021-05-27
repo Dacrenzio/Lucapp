@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import { StyleSheet, Button } from "react-native";
 
 import MiscInfoScreen from "./TabScreens/MiscInfoScreen";
 import TechInfoScreen from "./TabScreens/TechInfoScreen";
@@ -9,26 +10,48 @@ import CharDatas from "../../assets/rawData/CharDatas.js";
 
 const Tab = createMaterialTopTabNavigator();
 
-function TabNavigationInfo({ route }) {
-  const char = fetchCharDatas(route.params.charName);
+function TabNavigationInfo({ navigation, route }) {
+  const [charData, setCharDatas] = useState(
+    fetchCharDatas(route.params.charName)
+  );
+
+  var changeChar = () => {
+    setCharDatas(fetchCharDatas("Lucas"));
+    navigation.setOptions({ title: "Lucas" });
+  };
+
   return (
-    <Tab.Navigator backBehavior="none">
-      <Tab.Screen
-        name="Misc Info"
-        component={MiscInfoScreen}
-        initialParams={{ arrayItem: char }}
+    <>
+      <Tab.Navigator backBehavior="none">
+        <Tab.Screen
+          name="Misc Info"
+          children={() => <MiscInfoScreen charDatas={charData} />}
+        />
+        <Tab.Screen
+          name="Tech chase"
+          children={() => <TechInfoScreen charDatas={charData} />}
+        />
+        <Tab.Screen
+          name="Kill Confirm"
+          children={() => <KillConfirmScreen charDatas={charData} />}
+        />
+      </Tab.Navigator>
+      <Button
+        onPress={changeChar}
+        title={"cambia"}
+        style={{
+          position: "absolute",
+          zIndex: 99,
+          bottom: 5,
+          alignSelf: "center",
+          shadowColor: "black",
+          shadowOpacity: 0.15,
+          shadowOffset: { width: 0, height: 2 },
+          shadowRadius: 8,
+          elevation: 3, //Because shadow only work on iOS, elevation is same thing but for android.
+        }}
       />
-      <Tab.Screen
-        name="Tech chase"
-        component={TechInfoScreen}
-        initialParams={{ arrayItem: char }}
-      />
-      <Tab.Screen
-        name="Kill Confirm"
-        component={KillConfirmScreen}
-        initialParams={{ arrayItem: char }}
-      />
-    </Tab.Navigator>
+    </>
   );
 }
 
@@ -57,4 +80,11 @@ function fetchCharDatas(charName) {
   return "not found";
 }
 
+const styles = StyleSheet.create({
+  list: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
 export default TabNavigationInfo;

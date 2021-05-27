@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -30,7 +30,7 @@ export default function App() {
 const MyTheme = {
   dark: false,
   colors: {
-    primary: "rgb(0, 45, 150)",
+    primary: "#5efcff",
     background: "#222222",
     card: "#5000FF",
     text: "rgb(255, 255, 255)",

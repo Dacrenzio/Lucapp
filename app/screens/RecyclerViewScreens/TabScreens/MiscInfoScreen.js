@@ -9,8 +9,7 @@ import ZairUpAirTable from "./FuncTables/MiscTables/ZairUpAirTable";
 import AbsorbableMovesTable from "./FuncTables/MiscTables/AbsorbableMovesTable";
 import ShieldPressureTable from "./FuncTables/MiscTables/ShieldPressureTable";
 
-function MiscInfoScreen({ route }) {
-  let charDatas = route.params.arrayItem;
+function MiscInfoScreen({ charDatas }) {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.containerView}>

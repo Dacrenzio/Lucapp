@@ -7,12 +7,12 @@ function UpThrowTech({ charDatas }) {
   let datas = [];
   let stages = ["Battlefield", "Yoshi's Story", "Town&City"];
   let s = 0;
-  for (let index = 47; index < 51; index++) {
+  for (let index = 47; index < 50; ) {
+    datas.push([stages[s++], charDatas[index++]]);
+
     if (charDatas[index] != "--" && index == 50) {
       datas.push(["Max Rage:", charDatas[index]]);
-      break;
     }
-    datas.push([stages[s++], charDatas[index]]);
   }
 
   return (
