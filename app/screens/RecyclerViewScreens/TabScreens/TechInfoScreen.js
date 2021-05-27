@@ -5,6 +5,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import DefColors from "../../../../DefColors";
 import TumbleTable from "./FuncTables/TechTables/TumbleTable";
 import UpThrowTech from "./FuncTables/TechTables/UpThrowTech";
+import UpTiltTechTable from "./FuncTables/TechTables/UpTiltTechTable";
 
 function TechInfoScreen({ route }) {
   let charDatas = route.params.arrayItem;
@@ -13,6 +14,10 @@ function TechInfoScreen({ route }) {
       <View style={styles.containerView}>
         <TumbleTable charDatas={charDatas} />
         <UpThrowTech charDatas={charDatas} />
+        <UpTiltTechTable
+          charDatas={charDatas}
+          marginBott={{ marginBottom: 50 }}
+        />
       </View>
     </ScrollView>
   );

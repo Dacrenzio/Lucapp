@@ -6,8 +6,8 @@ const DefColors = {
 
   tableTitle: "#5efcff",
   primaryRow: "#FFF6A6",
-  secondaryRow: "#75FFC4",
-  noteRow: "#66d16a",
+  secondaryRow: "#75F0C4",
+  noteRow: "#86ff8a",
 
   yesColor: "#75FFC4",
   noColor: "#ff938a",
