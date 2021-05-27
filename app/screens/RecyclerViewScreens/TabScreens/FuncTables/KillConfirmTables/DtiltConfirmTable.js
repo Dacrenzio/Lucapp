@@ -14,9 +14,9 @@ function DtiltConfirmTable({ charDatas }) {
   if (charDatas[120] != "") {
     dtiltFsmash = [
       charDatas[120],
-      charDatas[117],
-      charDatas[118],
-      charDatas[119],
+      charDatas[121],
+      charDatas[122],
+      charDatas[123],
     ];
   } else {
     dtiltFsmash = ["Has an escape option"];
