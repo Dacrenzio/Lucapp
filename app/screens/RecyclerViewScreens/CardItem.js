@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
 import DefColors from "../../../DefColors";
 
-function CardItem({ id, numCol, src, name, nav }) {
+function CardItem({ id, itemNum, numCol, src, name, nav }) {
   const onPress = () => {
     nav.navigate("Datas", { charName: name });
   };
@@ -11,7 +11,7 @@ function CardItem({ id, numCol, src, name, nav }) {
       style={[
         styles.container,
         {
-          marginBottom: id >= 83 - (83 % numCol) ? 30 : 4,
+          marginBottom: id >= itemNum - 1 - ((itemNum - 1) % numCol) ? 30 : 4,
         },
       ]}
     >
@@ -31,8 +31,9 @@ const styles = StyleSheet.create({
     backgroundColor: DefColors.black,
     alignItems: "center",
     margin: 4,
-    maxWidth: "31%",
+    width: "31%",
     justifyContent: "center",
+    flexWrap: "wrap",
   },
   image: {
     width: 110,
