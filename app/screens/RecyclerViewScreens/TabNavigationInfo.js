@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import { StyleSheet, Button } from "react-native";
+import { StyleSheet, View } from "react-native";
+import { FAB } from "react-native-paper";
 
 import MiscInfoScreen from "./TabScreens/MiscInfoScreen";
 import TechInfoScreen from "./TabScreens/TechInfoScreen";
@@ -15,9 +16,9 @@ function TabNavigationInfo({ navigation, route }) {
     fetchCharDatas(route.params.charName)
   );
 
-  var changeChar = () => {
-    setCharDatas(fetchCharDatas("Lucas"));
-    navigation.setOptions({ title: "Lucas" });
+  const changeChar = (charName) => {
+    setCharDatas(fetchCharDatas(charName));
+    navigation.setOptions({ title: charName });
   };
 
   return (
@@ -36,23 +37,55 @@ function TabNavigationInfo({ navigation, route }) {
           children={() => <KillConfirmScreen charDatas={charData} />}
         />
       </Tab.Navigator>
-      <Button
-        onPress={changeChar}
-        title={"cambia"}
-        style={{
-          position: "absolute",
-          zIndex: 99,
-          bottom: 5,
-          alignSelf: "center",
-          shadowColor: "black",
-          shadowOpacity: 0.15,
-          shadowOffset: { width: 0, height: 2 },
-          shadowRadius: 8,
-          elevation: 3, //Because shadow only work on iOS, elevation is same thing but for android.
-        }}
-      />
+      <PtFABs charName={route.params.charName} onPressFunc={changeChar} />
     </>
   );
+}
+
+function PtFABs({ charName, onPressFunc }) {
+  const [squirtAble, setSquirtAble] = useState(false);
+  const [ivyAble, setIvyAble] = useState(true);
+  const [charAble, setCharAble] = useState(true);
+
+  if (charName == "Pokemon Trainer") {
+    return (
+      <View style={styles.container}>
+        <FAB
+          icon={require("../../assets/FAB_icons/pokeBall.png")}
+          onPress={() => {
+            setSquirtAble(false);
+            setIvyAble(true);
+            setCharAble(true);
+            onPressFunc("Squirtle");
+          }}
+          disabled={squirtAble}
+          color="#0010AA"
+        />
+        <FAB
+          icon={require("../../assets/FAB_icons/pokeBall.png")}
+          onPress={() => {
+            setSquirtAble(true);
+            setIvyAble(false);
+            setCharAble(true);
+            onPressFunc("Ivysaur");
+          }}
+          disabled={ivyAble}
+          color="#00AA10"
+        />
+        <FAB
+          icon={require("../../assets/FAB_icons/pokeBall.png")}
+          onPress={() => {
+            setSquirtAble(true);
+            setIvyAble(true);
+            setCharAble(false);
+            onPressFunc("Charizard");
+          }}
+          disabled={charAble}
+          color="#AA1000"
+        />
+      </View>
+    );
+  } else return null;
 }
 
 function fetchCharDatas(charName) {
@@ -81,10 +114,14 @@ function fetchCharDatas(charName) {
 }
 
 const styles = StyleSheet.create({
-  list: {
-    flex: 1,
+  container: {
+    position: "absolute",
+    bottom: 5,
+    left: 0,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
+    flexWrap: "wrap",
+    flexDirection: "row",
   },
 });
 export default TabNavigationInfo;
