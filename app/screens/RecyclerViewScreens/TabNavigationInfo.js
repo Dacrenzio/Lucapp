@@ -38,6 +38,10 @@ function TabNavigationInfo({ navigation, route }) {
         />
       </Tab.Navigator>
       <PtFABs charName={route.params.charName} onPressFunc={changeChar} />
+      <PyraMythraFABs
+        charName={route.params.charName}
+        onPressFunc={changeChar}
+      />
     </>
   );
 }
@@ -59,7 +63,7 @@ function PtFABs({ charName, onPressFunc }) {
             onPressFunc("Squirtle");
           }}
           disabled={squirtAble}
-          color="#0010AA"
+          style={{ backgroundColor: "#00A0fF" }}
         />
         <FAB
           icon={require("../../assets/FAB_icons/pokeBall.png")}
@@ -70,7 +74,7 @@ function PtFABs({ charName, onPressFunc }) {
             onPressFunc("Ivysaur");
           }}
           disabled={ivyAble}
-          color="#00AA10"
+          style={{ backgroundColor: "#00AA10" }}
         />
         <FAB
           icon={require("../../assets/FAB_icons/pokeBall.png")}
@@ -81,7 +85,36 @@ function PtFABs({ charName, onPressFunc }) {
             onPressFunc("Charizard");
           }}
           disabled={charAble}
-          color="#AA1000"
+          style={{ backgroundColor: "#AA1000" }}
+        />
+      </View>
+    );
+  } else return null;
+}
+
+function PyraMythraFABs({ charName, onPressFunc }) {
+  const [isPyra, setIsPyra] = useState(true);
+
+  if (charName == "Pyra/Mythra") {
+    return (
+      <View style={styles.container}>
+        <FAB
+          icon={require("../../assets/FAB_icons/pyra.png")}
+          onPress={() => {
+            setIsPyra(true);
+            onPressFunc("Pyra");
+          }}
+          disabled={isPyra}
+          color="#FF0000"
+        />
+        <FAB
+          icon={require("../../assets/FAB_icons/mythra.png")}
+          onPress={() => {
+            setIsPyra(false);
+            onPressFunc("Mythra");
+          }}
+          disabled={!isPyra}
+          color="#FAFF00"
         />
       </View>
     );
@@ -116,6 +149,8 @@ function fetchCharDatas(charName) {
 const styles = StyleSheet.create({
   container: {
     position: "absolute",
+    paddingHorizontal: 50,
+    marginBottom: 10,
     bottom: 5,
     width: "100%",
     alignItems: "center",

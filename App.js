@@ -20,7 +20,14 @@ export default function App() {
         <Stack.Screen
           name="Datas"
           component={TabNavigationInfo}
-          options={({ route }) => ({ title: route.params.charName })}
+          options={({ route }) => ({
+            title:
+              route.params.charName == "Pokemon Trainer"
+                ? "Squirtle"
+                : route.params.charName == "Pyra/Mythra"
+                ? "Pyra"
+                : route.params.charName,
+          })}
         />
       </Stack.Navigator>
     </NavigationContainer>

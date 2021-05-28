@@ -19,7 +19,16 @@ function MiscInfoScreen({ charDatas }) {
         <AbsorbableMovesTable charDatas={charDatas} />
         <ShieldPressureTable
           charDatas={charDatas}
-          marginBott={{ marginBottom: 50 }}
+          marginBott={{
+            marginBottom:
+              charDatas[0] == "Squirtle" ||
+              charDatas[0] == "Ivysaur" ||
+              charDatas[0] == "Charizard" ||
+              charDatas[0] == "Pyra" ||
+              charDatas[0] == "Mythra"
+                ? 100
+                : 50,
+          }}
         />
       </View>
     </ScrollView>
