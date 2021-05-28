@@ -43,9 +43,9 @@ function TabNavigationInfo({ navigation, route }) {
 }
 
 function PtFABs({ charName, onPressFunc }) {
-  const [squirtAble, setSquirtAble] = useState(false);
-  const [ivyAble, setIvyAble] = useState(true);
-  const [charAble, setCharAble] = useState(true);
+  const [squirtAble, setSquirtAble] = useState(true);
+  const [ivyAble, setIvyAble] = useState(false);
+  const [charAble, setCharAble] = useState(false);
 
   if (charName == "Pokemon Trainer") {
     return (
@@ -53,9 +53,9 @@ function PtFABs({ charName, onPressFunc }) {
         <FAB
           icon={require("../../assets/FAB_icons/pokeBall.png")}
           onPress={() => {
-            setSquirtAble(false);
-            setIvyAble(true);
-            setCharAble(true);
+            setSquirtAble(true);
+            setIvyAble(false);
+            setCharAble(false);
             onPressFunc("Squirtle");
           }}
           disabled={squirtAble}
@@ -64,9 +64,9 @@ function PtFABs({ charName, onPressFunc }) {
         <FAB
           icon={require("../../assets/FAB_icons/pokeBall.png")}
           onPress={() => {
-            setSquirtAble(true);
-            setIvyAble(false);
-            setCharAble(true);
+            setSquirtAble(false);
+            setIvyAble(true);
+            setCharAble(false);
             onPressFunc("Ivysaur");
           }}
           disabled={ivyAble}
@@ -75,9 +75,9 @@ function PtFABs({ charName, onPressFunc }) {
         <FAB
           icon={require("../../assets/FAB_icons/pokeBall.png")}
           onPress={() => {
-            setSquirtAble(true);
-            setIvyAble(true);
-            setCharAble(false);
+            setSquirtAble(false);
+            setIvyAble(false);
+            setCharAble(true);
             onPressFunc("Charizard");
           }}
           disabled={charAble}
@@ -90,9 +90,9 @@ function PtFABs({ charName, onPressFunc }) {
 
 function fetchCharDatas(charName) {
   if (charName === "Pokemon Trainer") {
-    return CharDatas[75].split(";");
+    charName = "Squirtle";
   } else if (charName === "Pyra/Mythra") {
-    return CharDatas[61].split(";");
+    charName = "Pyra";
   }
   let l = 0;
   let r = CharDatas.length - 1;
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
   container: {
     position: "absolute",
     bottom: 5,
-    left: 0,
+    width: "100%",
     alignItems: "center",
     justifyContent: "space-evenly",
     flexWrap: "wrap",
