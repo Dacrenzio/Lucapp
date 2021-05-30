@@ -25,7 +25,7 @@ function TumbleTable({ charDatas }) {
   return (
     <Table style={styles.table}>
       <Row
-        data={["Tuble Percents"]}
+        data={["Tumble Percents"]}
         style={{ backgroundColor: DefColors.tableTitle }}
         textStyle={styles.primaryRow}
       />
