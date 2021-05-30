@@ -2,10 +2,12 @@ import React from "react";
 import { Text, View, StyleSheet, Image, TouchableOpacity } from "react-native";
 import DefColors from "../../../DefColors";
 
-function CardItem({ id, itemNum, numCol, src, name, nav }) {
+function CardItem({ id, itemNum, numCol, src, name, nav, set }) {
   const onPress = () => {
-    nav.navigate("Datas", { charName: name });
+    set(name);
+    nav.navigate("Datas");
   };
+
   return (
     <View
       style={[

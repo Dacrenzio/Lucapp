@@ -11,14 +11,12 @@ import CharDatas from "../../assets/rawData/CharDatas.js";
 
 const Tab = createMaterialTopTabNavigator();
 
-function TabNavigationInfo({ navigation, route }) {
-  const [charData, setCharDatas] = useState(
-    fetchCharDatas(route.params.charName)
-  );
+function TabNavigationInfo({ navigation, char }) {
+  const [charData, setCharData] = useState(fetchCharDatas(char));
 
-  const changeChar = (charName) => {
-    setCharDatas(fetchCharDatas(charName));
-    navigation.setOptions({ title: charName });
+  const changeChar = (newChar) => {
+    setChar(fetchCharDatas(newChar));
+    navigation.setOptions({ title: newChar });
   };
 
   return (
@@ -37,11 +35,8 @@ function TabNavigationInfo({ navigation, route }) {
           children={() => <KillConfirmScreen charDatas={charData} />}
         />
       </Tab.Navigator>
-      <PtFABs charName={route.params.charName} onPressFunc={changeChar} />
-      <PyraMythraFABs
-        charName={route.params.charName}
-        onPressFunc={changeChar}
-      />
+      <PtFABs charName={char[0]} onPressFunc={changeChar} />
+      <PyraMythraFABs charName={char[0]} onPressFunc={changeChar} />
     </>
   );
 }

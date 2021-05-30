@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -9,26 +9,26 @@ import TabNavigationInfo from "./app/screens/RecyclerViewScreens/TabNavigationIn
 const Stack = createStackNavigator();
 
 export default function App() {
+  const [charName, setCharName] = useState("ciao");
   return (
     <NavigationContainer
       style={styles.container}
-      linking={{ enabled: false }}
+      linking={{ enabled: true }}
       theme={MyTheme}
     >
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={FlatListGridCard} />
-        <Stack.Screen
-          name="Datas"
-          component={TabNavigationInfo}
-          options={({ route }) => ({
-            title:
-              route.params.charName == "Pokemon Trainer"
-                ? "Squirtle"
-                : route.params.charName == "Pyra/Mythra"
-                ? "Pyra"
-                : route.params.charName,
-          })}
-        />
+        <Stack.Screen name="Home">
+          {(props) => (
+            <FlatListGridCard
+              navigation={props.navigation}
+              setChar={setCharName}
+            />
+          )}
+        </Stack.Screen>
+
+        <Stack.Screen name="Datas" options={() => ({ title: charName })}>
+          {(props) => <TabNavigationInfo char={charName} />}
+        </Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );

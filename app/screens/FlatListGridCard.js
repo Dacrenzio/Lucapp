@@ -12,13 +12,11 @@ import DefColors from "../../DefColors";
 import charNames from "../assets/icons/charNames";
 import CardItem from "./RecyclerViewScreens/CardItem";
 
-function FlatListGridCard({ navigation }) {
+function FlatListGridCard({ navigation, setChar }) {
   const [dataList, setDataList] = useState(charNames);
   const [numColumns, setNumColumns] = useState(
     Math.floor(Dimensions.get("window").width / 130)
   );
-
-  var key;
 
   const searchFilter = (text) => {
     if (text) {
@@ -30,10 +28,6 @@ function FlatListGridCard({ navigation }) {
       setDataList(charNames);
     }
   };
-
-  Dimensions.addEventListener("change", () => {
-    key = Math.floor(Dimensions.get("window").width / 130);
-  });
 
   return (
     <View style={styles.list}>
@@ -64,6 +58,7 @@ function FlatListGridCard({ navigation }) {
             src={item.src}
             name={item.name}
             nav={navigation}
+            set={setChar}
           />
         )}
         numColumns={numColumns}
