@@ -16,7 +16,7 @@ export default function App() {
   return (
     <NavigationContainer
       style={styles.container}
-      linking={{ enabled: true }}
+      linking={{ enabled: false }}
       theme={MyTheme}
     >
       <Stack.Navigator
