@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     paddingHorizontal: 50,
     marginBottom: 10,
-    bottom: 5,
+    bottom: 15,
     width: "100%",
     alignItems: "center",
     justifyContent: "space-evenly",

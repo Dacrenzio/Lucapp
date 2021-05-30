@@ -31,9 +31,8 @@ const styles = StyleSheet.create({
     backgroundColor: DefColors.black,
     alignItems: "center",
     margin: 4,
-    width: "31%",
+    width: 122,
     justifyContent: "center",
-    flexWrap: "wrap",
   },
   image: {
     width: 110,

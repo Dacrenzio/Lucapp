@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   StyleSheet,
   FlatList,
-  SafeAreaView,
   Dimensions,
   TextInput,
   View,
@@ -13,12 +12,14 @@ import DefColors from "../../DefColors";
 import charNames from "../assets/icons/charNames";
 import CardItem from "./RecyclerViewScreens/CardItem";
 
-const width = Dimensions.get("window").width;
-const numcolumns = width > 420 ? 5 : 3;
-
 function FlatListGridCard({ navigation }) {
   const [dataList, setDataList] = useState(charNames);
-  console.log(dataList.length);
+  const [numColumns, setNumColumns] = useState(
+    Math.floor(Dimensions.get("window").width / 130)
+  );
+
+  var key;
+
   const searchFilter = (text) => {
     if (text) {
       let newData = charNames.filter((item) => {
@@ -29,6 +30,10 @@ function FlatListGridCard({ navigation }) {
       setDataList(charNames);
     }
   };
+
+  Dimensions.addEventListener("change", () => {
+    key = Math.floor(Dimensions.get("window").width / 130);
+  });
 
   return (
     <View style={styles.list}>
@@ -49,22 +54,21 @@ function FlatListGridCard({ navigation }) {
         />
       </View>
 
-      <View style={{ flex: 1 }}>
-        <FlatList
-          data={dataList}
-          renderItem={({ item }) => (
-            <CardItem
-              id={dataList.indexOf(item)}
-              itemNum={dataList.length}
-              numCol={numcolumns}
-              src={item.src}
-              name={item.name}
-              nav={navigation}
-            />
-          )}
-          numColumns={numcolumns}
-        />
-      </View>
+      <FlatList
+        data={dataList}
+        renderItem={({ item }) => (
+          <CardItem
+            id={dataList.indexOf(item)}
+            itemNum={dataList.length}
+            numCol={numColumns}
+            src={item.src}
+            name={item.name}
+            nav={navigation}
+          />
+        )}
+        numColumns={numColumns}
+        style={{ alignSelf: "center", flex: 1 }}
+      />
     </View>
   );
 }
@@ -72,7 +76,6 @@ function FlatListGridCard({ navigation }) {
 const styles = StyleSheet.create({
   list: {
     flex: 1,
-    justifyContent: "center",
     alignContent: "center",
   },
   input: {
@@ -83,7 +86,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 30,
     borderColor: DefColors.tableTitle,
-    justifyContent: "flex-start",
+    flexWrap: "wrap",
     flexDirection: "row",
   },
 });

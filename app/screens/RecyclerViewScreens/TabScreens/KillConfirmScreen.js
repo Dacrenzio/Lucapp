@@ -11,33 +11,33 @@ import UpThrowKillTable from "./FuncTables/KillConfirmTables/UpThrowKillTable";
 
 function KillConfirmScreen({ charDatas }) {
   return (
-    <ScrollView style={styles.container}>
-      <View style={styles.containerView}>
-        <UpThrowKillTable charDatas={charDatas} />
-        <UpSmashKillTable charDatas={charDatas} />
-        <DtiltConfirmTable charDatas={charDatas} />
-        <DairLoopTable charDatas={charDatas} />
-        <BairUntechTable
-          charDatas={charDatas}
-          marginBott={{
-            marginBottom:
-              charDatas[0] == "Squirtle" ||
-              charDatas[0] == "Ivysaur" ||
-              charDatas[0] == "Charizard" ||
-              charDatas[0] == "Pyra" ||
-              charDatas[0] == "Mythra"
-                ? 100
-                : 50,
-          }}
-        />
-      </View>
+    <ScrollView
+      style={styles.container}
+      contentContainerStyle={styles.containerView}
+    >
+      <UpThrowKillTable charDatas={charDatas} />
+      <UpSmashKillTable charDatas={charDatas} />
+      <DtiltConfirmTable charDatas={charDatas} />
+      <DairLoopTable charDatas={charDatas} />
+      <BairUntechTable
+        charDatas={charDatas}
+        marginBott={{
+          marginBottom:
+            charDatas[0] == "Squirtle" ||
+            charDatas[0] == "Ivysaur" ||
+            charDatas[0] == "Charizard" ||
+            charDatas[0] == "Pyra" ||
+            charDatas[0] == "Mythra"
+              ? 100
+              : 50,
+        }}
+      />
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: DefColors.black,
   },
   containerView: {
