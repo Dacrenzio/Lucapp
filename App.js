@@ -42,12 +42,22 @@ export default function App() {
 }
 
 function FABpersonal() {
+  const [state, setState] = React.useState({ open: false });
+
   return (
     <View style={styles.viewContainer}>
+      <FAB
+        onPress={() => setState(!state)}
+        title="more"
+        icon={state ? "plus-circle-multiple" : "minus-circle-multiple"}
+        style={styles.fabs}
+        color="#000"
+      />
       <FAB
         onPress={() => {
           Linking.openURL("https://twitter.com/Dacrenzio1");
         }}
+        visible={!state}
         title="help"
         icon="twitter"
         style={styles.fabs}
@@ -57,6 +67,7 @@ function FABpersonal() {
         onPress={() => {
           Linking.openURL("https://discord.gg/dWnPTmnbXM");
         }}
+        visible={!state}
         title="Discord"
         icon="discord"
         style={styles.fabs}
@@ -66,6 +77,7 @@ function FABpersonal() {
         onPress={() => {
           Linking.openURL("https://t.co/pNPacF4dWb");
         }}
+        visible={!state}
         title="Resource File"
         icon="attachment"
         style={styles.fabs}
@@ -75,6 +87,7 @@ function FABpersonal() {
         onPress={() => {
           Linking.openURL("https://paypal.me/dacrenzio");
         }}
+        visible={!state}
         title="Donation"
         icon={{ uri: "https://cdnlogo.com/logos/p/42/paypal-icon.svg" }}
         style={styles.fabs}
@@ -103,12 +116,12 @@ const styles = StyleSheet.create({
   },
   fabs: {
     justifyContent: "center",
-    borderRadius: 15,
-    margin: 6,
+    borderRadius: 20,
+    margin: 5,
     backgroundColor: DefColors.primaryRow,
   },
   viewContainer: {
-    flexDirection: "row",
+    flexDirection: "row-reverse",
     flex: 1,
     justifyContent: "center",
   },
