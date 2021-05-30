@@ -1,7 +1,7 @@
 {
   "files": {
-    "app.js": "/Lucapp/static/js/app.a8e7be79.chunk.js",
-    "app.js.map": "/Lucapp/static/js/app.a8e7be79.chunk.js.map",
+    "app.js": "/Lucapp/static/js/app.1e77356e.chunk.js",
+    "app.js.map": "/Lucapp/static/js/app.1e77356e.chunk.js.map",
     "runtime~app.js": "/Lucapp/static/js/runtime~app.46e6d134.js",
     "runtime~app.js.map": "/Lucapp/static/js/runtime~app.46e6d134.js.map",
     "static/js/2.d142d8c1.chunk.js": "/Lucapp/static/js/2.d142d8c1.chunk.js",
@@ -105,6 +105,6 @@
   "entrypoints": [
     "static/js/runtime~app.46e6d134.js",
     "static/js/2.d142d8c1.chunk.js",
-    "static/js/app.a8e7be79.chunk.js"
+    "static/js/app.1e77356e.chunk.js"
   ]
 }
