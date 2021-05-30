@@ -73,7 +73,7 @@ function FABpersonal() {
       />
       <FAB
         onPress={() => {
-          Linking.openURL("https://t.co/pNPacF4dWb");
+          Linking.openURL("https://paypal.me/dacrenzio");
         }}
         title="Donation"
         icon={{ uri: "https://cdnlogo.com/logos/p/42/paypal-icon.svg" }}
