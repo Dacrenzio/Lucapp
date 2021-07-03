@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/Lucapp/static/js/app.f58aff4a.chunk.js",
-    "app.js.map": "/Lucapp/static/js/app.f58aff4a.chunk.js.map",
+    "app.js": "/Lucapp/static/js/app.341d203b.chunk.js",
+    "app.js.map": "/Lucapp/static/js/app.341d203b.chunk.js.map",
     "runtime~app.js": "/Lucapp/static/js/runtime~app.46e6d134.js",
     "runtime~app.js.map": "/Lucapp/static/js/runtime~app.46e6d134.js.map",
-    "static/js/2.d142d8c1.chunk.js": "/Lucapp/static/js/2.d142d8c1.chunk.js",
-    "static/js/2.d142d8c1.chunk.js.map": "/Lucapp/static/js/2.d142d8c1.chunk.js.map",
+    "static/js/2.edc6a323.chunk.js": "/Lucapp/static/js/2.edc6a323.chunk.js",
+    "static/js/2.edc6a323.chunk.js.map": "/Lucapp/static/js/2.edc6a323.chunk.js.map",
     "fonts/MaterialCommunityIcons.ttf": "/Lucapp/./fonts/MaterialCommunityIcons.ttf",
     "favicon-16.png": "/Lucapp/favicon-16.png",
     "favicon-32.png": "/Lucapp/favicon-32.png",
@@ -13,7 +13,7 @@
     "index.html": "/Lucapp/index.html",
     "manifest.json": "/Lucapp/manifest.json",
     "serve.json": "/Lucapp/serve.json",
-    "static/js/2.d142d8c1.chunk.js.LICENSE.txt": "/Lucapp/static/js/2.d142d8c1.chunk.js.LICENSE.txt",
+    "static/js/2.edc6a323.chunk.js.LICENSE.txt": "/Lucapp/static/js/2.edc6a323.chunk.js.LICENSE.txt",
     "static/media/banjo_and_kazooie.png": "/Lucapp/static/media/banjo_and_kazooie.f70a513e.png",
     "static/media/bayonetta.png": "/Lucapp/static/media/bayonetta.2287b458.png",
     "static/media/bowser.png": "/Lucapp/static/media/bowser.dc1e6b02.png",
@@ -42,6 +42,7 @@
     "static/media/isabelle.png": "/Lucapp/static/media/isabelle.78e0793e.png",
     "static/media/jigglypuff.png": "/Lucapp/static/media/jigglypuff.2f2e2a75.png",
     "static/media/joker.png": "/Lucapp/static/media/joker.5faaf620.png",
+    "static/media/kazuya.png": "/Lucapp/static/media/kazuya.6ecc076f.png",
     "static/media/ken.png": "/Lucapp/static/media/ken.82926088.png",
     "static/media/king_dedede.png": "/Lucapp/static/media/king_dedede.6a98dc2b.png",
     "static/media/king_k_rool.png": "/Lucapp/static/media/king_k_rool.b9edff6e.png",
@@ -104,7 +105,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.46e6d134.js",
-    "static/js/2.d142d8c1.chunk.js",
-    "static/js/app.f58aff4a.chunk.js"
+    "static/js/2.edc6a323.chunk.js",
+    "static/js/app.341d203b.chunk.js"
   ]
 }
