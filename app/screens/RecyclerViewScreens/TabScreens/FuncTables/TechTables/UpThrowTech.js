@@ -18,7 +18,7 @@ function UpThrowTech({ charDatas }) {
   return (
     <Table style={styles.table}>
       <Row
-        data={["Up-Throw granted tech chase"]}
+        data={["Up-Throw forced tech chase"]}
         style={{ backgroundColor: DefColors.tableTitle }}
         textStyle={styles.primaryRow}
       />

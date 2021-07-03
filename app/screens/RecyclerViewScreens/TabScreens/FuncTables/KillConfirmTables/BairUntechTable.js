@@ -4,12 +4,12 @@ import { Table, Row } from "react-native-table-component";
 import DefColors from "../../../../../../DefColors";
 
 function BairUntechTable({ charDatas, marginBott }) {
-  let datas = [charDatas[43], charDatas[44], charDatas[45], charDatas[46]];
+  let datas = [charDatas[86], charDatas[87], charDatas[88], charDatas[89]];
 
   return (
     <Table style={[styles.table, marginBott]}>
       <Row
-        data={["B-Air untechable"]}
+        data={["B-Air loop"]}
         style={{ backgroundColor: DefColors.tableTitle }}
         textStyle={styles.primaryRow}
       />
