@@ -34,7 +34,7 @@ export default function App() {
         </Stack.Screen>
 
         <Stack.Screen name="Datas" options={() => ({ title: charName })}>
-          {(props) => <TabNavigationInfo char={charName} />}
+          {(props) => <TabNavigationInfo navigation={props.navigation} char={charName} setChar={setCharName} />}
         </Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>

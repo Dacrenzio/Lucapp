@@ -11,11 +11,12 @@ import CharDatas from "../../assets/rawData/CharDatas.js";
 
 const Tab = createMaterialTopTabNavigator();
 
-function TabNavigationInfo({ navigation, char }) {
+function TabNavigationInfo({ navigation, char, setChar}) {
   const [charData, setCharData] = useState(fetchCharDatas(char));
+  setChar(charData[0])
 
   const changeChar = (newChar) => {
-    setChar(fetchCharDatas(newChar));
+    setCharData(fetchCharDatas(newChar));
     navigation.setOptions({ title: newChar });
   };
 
@@ -35,8 +36,8 @@ function TabNavigationInfo({ navigation, char }) {
           children={() => <KillConfirmScreen charDatas={charData} />}
         />
       </Tab.Navigator>
-      <PtFABs charName={char[0]} onPressFunc={changeChar} />
-      <PyraMythraFABs charName={char[0]} onPressFunc={changeChar} />
+      <PtFABs charName={char} onPressFunc={changeChar} />
+      <PyraMythraFABs charName={char} onPressFunc={changeChar} />
     </>
   );
 }
@@ -46,7 +47,7 @@ function PtFABs({ charName, onPressFunc }) {
   const [ivyAble, setIvyAble] = useState(false);
   const [charAble, setCharAble] = useState(false);
 
-  if (charName == "Pokemon Trainer") {
+  if (charName == "Squirtle" || charName == "Ivysaur" || charName == "Charizard") {
     return (
       <View style={styles.container}>
         <FAB
@@ -90,7 +91,7 @@ function PtFABs({ charName, onPressFunc }) {
 function PyraMythraFABs({ charName, onPressFunc }) {
   const [isPyra, setIsPyra] = useState(true);
 
-  if (charName == "Pyra/Mythra") {
+  if (charName == "Pyra" || charName == "Mythra") {
     return (
       <View style={styles.container}>
         <FAB
