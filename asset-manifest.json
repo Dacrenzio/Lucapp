@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/Lucapp/static/js/app.b8c8f37b.chunk.js",
-    "app.js.map": "/Lucapp/static/js/app.b8c8f37b.chunk.js.map",
+    "app.js": "/Lucapp/static/js/app.1a21243d.chunk.js",
+    "app.js.map": "/Lucapp/static/js/app.1a21243d.chunk.js.map",
     "runtime~app.js": "/Lucapp/static/js/runtime~app.46e6d134.js",
     "runtime~app.js.map": "/Lucapp/static/js/runtime~app.46e6d134.js.map",
-    "static/js/2.edc6a323.chunk.js": "/Lucapp/static/js/2.edc6a323.chunk.js",
-    "static/js/2.edc6a323.chunk.js.map": "/Lucapp/static/js/2.edc6a323.chunk.js.map",
+    "static/js/2.c93b6032.chunk.js": "/Lucapp/static/js/2.c93b6032.chunk.js",
+    "static/js/2.c93b6032.chunk.js.map": "/Lucapp/static/js/2.c93b6032.chunk.js.map",
     "fonts/MaterialCommunityIcons.ttf": "/Lucapp/./fonts/MaterialCommunityIcons.ttf",
     "favicon-16.png": "/Lucapp/favicon-16.png",
     "favicon-32.png": "/Lucapp/favicon-32.png",
@@ -13,7 +13,7 @@
     "index.html": "/Lucapp/index.html",
     "manifest.json": "/Lucapp/manifest.json",
     "serve.json": "/Lucapp/serve.json",
-    "static/js/2.edc6a323.chunk.js.LICENSE.txt": "/Lucapp/static/js/2.edc6a323.chunk.js.LICENSE.txt",
+    "static/js/2.c93b6032.chunk.js.LICENSE.txt": "/Lucapp/static/js/2.c93b6032.chunk.js.LICENSE.txt",
     "static/media/banjo_and_kazooie.png": "/Lucapp/static/media/banjo_and_kazooie.f70a513e.png",
     "static/media/bayonetta.png": "/Lucapp/static/media/bayonetta.2287b458.png",
     "static/media/bowser.png": "/Lucapp/static/media/bowser.dc1e6b02.png",
@@ -91,6 +91,7 @@
     "static/media/simon.png": "/Lucapp/static/media/simon.3671f785.png",
     "static/media/snake.png": "/Lucapp/static/media/snake.91250d85.png",
     "static/media/sonic.png": "/Lucapp/static/media/sonic.b65e5c22.png",
+    "static/media/sora.png": "/Lucapp/static/media/sora.495e14a7.png",
     "static/media/steve.png": "/Lucapp/static/media/steve.c14b9711.png",
     "static/media/terry.png": "/Lucapp/static/media/terry.73e73c16.png",
     "static/media/toon_link.png": "/Lucapp/static/media/toon_link.8f46dfba.png",
@@ -105,7 +106,7 @@
   },
   "entrypoints": [
     "static/js/runtime~app.46e6d134.js",
-    "static/js/2.edc6a323.chunk.js",
-    "static/js/app.b8c8f37b.chunk.js"
+    "static/js/2.c93b6032.chunk.js",
+    "static/js/app.1a21243d.chunk.js"
   ]
 }
